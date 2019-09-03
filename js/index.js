@@ -71,3 +71,7 @@ document.querySelectorAll('nav a').forEach(navLink => {
         navLink.addEventListener('click', (e) => e.preventDefault())
     }
 );
+
+// Go look at GSAP and implement the animations found in that library with your custom events.
+document.querySelector('body').style.opacity = 0;
+TweenMax.to('body', 5, {opacity:1, delay:0});
