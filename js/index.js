@@ -36,7 +36,8 @@ window.addEventListener('load', (e) => {
 
 // focus
 
-
+document.querySelector('input').addEventListener('focus', (e) => e.target.style.background = 'pink');
+document.querySelector('input').addEventListener('blur', (e) => e.target.style.background = 'white');
 
 // resize
 
@@ -44,7 +45,12 @@ window.addEventListener('resize', (e) => console.log('Window was resized to', e.
 
 // scroll
 
-window.addEventListener('scroll', (e) => console.log('Window was scrolled!'));
+window.addEventListener('scroll', () => console.log('Window was scrolled!'));
 
 // select
+
+document.querySelector('input').addEventListener('select', () => alert('No copying!'));
+
 // dblclick
+
+document.querySelectorAll('.content-pick .btn').forEach(btn => btn.addEventListener('dblclick', (e) => e.target.style.display = 'none'));
