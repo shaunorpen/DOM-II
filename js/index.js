@@ -54,3 +54,11 @@ document.querySelector('input').addEventListener('select', () => alert('No copyi
 // dblclick
 
 document.querySelectorAll('.content-pick .btn').forEach(btn => btn.addEventListener('dblclick', (e) => e.target.style.display = 'none'));
+
+// Nest two similar events somewhere in the site and prevent the event propagation properly
+
+// Stop the navigation from items from refreshing the page by using preventDefault()
+document.querySelectorAll('nav a').forEach(navLink => {
+        navLink.addEventListener('click', (e) => e.preventDefault())
+    }
+);
