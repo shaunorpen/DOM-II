@@ -23,7 +23,7 @@ document.querySelector('body').addEventListener('wheel', (e) => {
 document.querySelectorAll('img').forEach(
     item => item.addEventListener(
         'drag', (e) => {
-            return e.target.style = 'transform: rotate(180deg);';
+            TweenMax.to(e.target, 2, {transform:"rotate(180deg)"});
         }
     )
 );
