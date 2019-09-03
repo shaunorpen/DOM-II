@@ -56,6 +56,15 @@ document.querySelector('input').addEventListener('select', () => alert('No copyi
 document.querySelectorAll('.content-pick .btn').forEach(btn => btn.addEventListener('dblclick', (e) => e.target.style.display = 'none'));
 
 // Nest two similar events somewhere in the site and prevent the event propagation properly
+document.querySelector('.intro h2').addEventListener('click', (e) => {
+    alert('Clicked on Welcome to Fun Bus!');
+    e.stopPropagation();
+    return e.target.textContent = 'Fun Bus welcomes you!';
+});
+
+document.querySelector('.intro').addEventListener('click', (e) => {
+    alert('Clicked on Welcome div!');
+});
 
 // Stop the navigation from items from refreshing the page by using preventDefault()
 document.querySelectorAll('nav a').forEach(navLink => {
