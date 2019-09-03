@@ -5,4 +5,11 @@ rockets.forEach(
         rockets.forEach(rocket => rocket.style.order = 0);
         e.target.style.order = -1;
     })
-)
+);
+
+rockets.forEach(
+    rocket => rocket.addEventListener('mousedown', (e) => {
+        rockets.forEach(rocket => rocket.style.marginLeft = 0);
+        e.target.style.marginLeft = '100px';
+    }
+));
